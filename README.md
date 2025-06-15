@@ -7,6 +7,7 @@
 [![PostgreSQL](https://img.shields.io/badge/DB-PostgreSQL-blue.svg)](https://www.postgresql.org/)  
 [![Axios](https://img.shields.io/badge/HTTP%20Client-Axios-007ACC.svg)](https://axios-http.com/)  
 [![React](https://img.shields.io/badge/Frontend-React-blue.svg)](https://reactjs.org/)  
+[![Animations](https://img.shields.io/badge/Animaci%C3%B3n-Framer%20Motion-blueviolet.svg?style=for-the-badge)](https://www.framer.com/motion/)
 
 ---
 
@@ -66,14 +67,16 @@ En el directorio `server/`, crea un archivo `.env` con:
 
 ```dotenv
 PORT=3000
-DB_NAME=nombre_de_tu_bd    # ← Puedes cambiar el nombre de la BD aquí
+DB_NAME=<TU_NOMBRE_DE_BD>    # Cree tu propia base de datos en PostgreSQL y use este nombre
 DB_USER=tu_usuario
 DB_PASSWORD=tu_contraseña
 DB_HOST=localhost
 DB_PORT=5432
 ```
 
-> **Nota**: No es obligatorio llamar a tu base de datos `api_countries` – cambia `DB_NAME` al que prefieras, y Sequelize la usará automáticamente.
+> **Importante**:  
+> - Cree una base de datos en PostgreSQL (ej. `my_countries_db`) antes de ejecutar el backend.  
+> - El valor de `DB_NAME` debe coincidir con el nombre que usted creó.
 
 ---
 
@@ -102,7 +105,7 @@ DB_PORT=5432
    ```bash
    npm start
    ```
-2. Abre tu navegador en `http://localhost:3000` para ver la tabla interactiva.
+2. Abre tu navegador en `http://localhost:3000` para ver la tabla interactiva con animaciones.
 
 ---
 
@@ -117,14 +120,15 @@ country-info-app/
 │  │  ├─ services/     # Lógica de negocio (API fetch + DB)
 │  │  ├─ controllers/  # Endpoints Express
 │  │  └─ routes/       # Rutas HTTP
-│  ├─ .env
+│  ├─ .env             # Variables de entorno / Cambiar DB_NAME
 │  └─ server.js
 └─ client/             # Frontend React + Material-UI
    ├─ public/
+   │   └─ index.html   # Incluir Google Font Montserrat
    └─ src/
-      ├─ components/   # CountryList.jsx
-   │  ├─ App.js
-   │  └─ index.js
+       ├─ components/  # CountryList.jsx con botón y animaciones
+       ├─ App.js
+       └─ index.js     # ThemeProvider con fuente y CssBaseline
 ```
 
 ---
@@ -137,3 +141,7 @@ country-info-app/
 - [PostgreSQL](https://www.postgresql.org/)  
 - [Material-UI](https://mui.com/)  
 - [Framer Motion](https://www.framer.com/motion/)  
+
+---
+
+> Proyecto desarrollado para la asignatura de Arquitectura Empresarial.  
