@@ -67,7 +67,7 @@ En el directorio `server/`, crea un archivo `.env` con:
 
 ```dotenv
 PORT=3000
-DB_NAME=<TU_NOMBRE_DE_BD>    # Cree tu propia base de datos en PostgreSQL y use este nombre
+DB_NAME=<TU_NOMBRE_DE_BD>    # Cree su propia base de datos en PostgreSQL y use ese nombre
 DB_USER=tu_usuario
 DB_PASSWORD=tu_contraseña
 DB_HOST=localhost
